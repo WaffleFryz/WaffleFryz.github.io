@@ -1,0 +1,35 @@
+.button {
+    background-color: #04AA6D; /* Green */
+    border-style: solid;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.ct {
+    background-color: #58768E;
+    border-color: #0C0F12;
+}
+.ct:hover {
+    background-color: #6588A3;
+}
+
+.ct:active {
+    background-color: #87B7DB;
+}
+
+.t {
+    background-color: #CBBA7B;
+    border-color: #473F32;
+}
+.t:hover {
+    background-color: #D3BF83;
+}
+.t:active {
+    background-color: #E0CB8D;
+}
