@@ -70,7 +70,7 @@ function roll(stratArray) {
         document.getElementById("bothTeamAlert").style.display = "none"
     }
 
-    spin.play()
+    // spin.play()
 }
 
 function rollCTStrat() {
