@@ -1,4 +1,6 @@
-let text = '{ "generic": [' +
+const spin = new Audio('357_spin1.wav')
+
+const text = '{ "generic": [' +
         '{"name" : "Knife Round", "desc" : "Knife only. No grenades."},' +
         '{"name" : "Grenadier", "desc" : "Buy as many nades as possible. Must use all first before knifing."},' +
         '{"name" : "Hero Rifler", "desc" : "Only the topfrag can buy a gun other than pistols. If they can\'t buy one, donate one."},' +
@@ -10,7 +12,7 @@ let text = '{ "generic": [' +
         '{"name" : "The Mechanic", "desc" : "Only the bottom fragger is allowed to reload guns; they cannot shoot until they are the last one alive; Swap mechanic if they die early"},' +
         '{"name" : "Moonwalking ", "desc" : "You can only move by holding S"},' +
         '{"name" : "Shitcaller", "desc" : "Team leader hides in the spawn/toilet and calls shots; when they are last alive they can leave toilet"},' +
-        '{"name" : "Crabwalk Dualies", "desc" : "(You must be cosntantly crouchwalking with Dual Berettas"},' +
+        '{"name" : "Crabwalk Dualies", "desc" : "You must be cosntantly crouchwalking with Dual Berettas"},' +
         '{"name" : "DOOM ", "desc" : "You can only move with W and S"},' +
         '{"name" : "Deathball", "desc" : "Entire team moves closely together"},' +
         '{"name" : "Flock o birds", "desc" : "Entire team walks together and scatter when shot at; regroup when quiet"},' +
@@ -42,7 +44,7 @@ let text = '{ "generic": [' +
     '"multi_team": [' +
         '{"name" : "Hide & Seek", "desc" : "T\'s have to kill all the CT\'s; CT\'s are only allowed to have USP/P2000; No planting allowed"},' +
         '{"name" : "Retake practice", "desc" : "T announce where they\'re planting while CT\'s can post up outside of site; no shooting until bomb is planted"},' +
-        '{"name" : "Track & Field", "desc" : "Both teams race from A to B. You\'re only allowed to shoot once you reach B. Grenades allowed during race. (Umamusme OST optional)"}' +
+        '{"name" : "Track & Field", "desc" : "Both teams race from A to B. You\'re only allowed to shoot once you reach B. Grenades allowed during race. (Umamusme OST optional)\\nhttps://www.youtube.com/watch?v=8UC6AQyRoc8"}' +
     ']}';
 
 var jsonData = JSON.parse(text);
@@ -61,11 +63,14 @@ function roll(stratArray) {
 
     document.getElementById("strat-title").textContent = selectedStrat.name;
     document.getElementById("strat-desc").textContent = selectedStrat.desc;
+
     if(index >= originalLength) {
         document.getElementById("bothTeamAlert").style.display = "block"
     }else {
         document.getElementById("bothTeamAlert").style.display = "none"
     }
+
+    spin.play()
 }
 
 function rollCTStrat() {
