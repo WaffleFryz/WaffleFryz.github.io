@@ -38,22 +38,40 @@ let text = '{ "generic": [' +
     '"t_only": [' +
         '{"name" : "P90 Rush B", "desc" : "сука блять"},' +
         '{"name" : "FitnessGram Pacer Test", "desc" : "T\'s go to A. If they get a kill go to B and vise versa. Repeat until bomb is being planted"}' +
+    '],' +
+    '"multi_team": [' +
+        '{"name" : "Hide & Seek", "desc" : "T\'s have to kill all the CT\'s; CT\'s are only allowed to have USP/P2000; No planting allowed"},' +
+        '{"name" : "Retake practice", "desc" : "T announce where they\'re planting while CT\'s can post up outside of site; no shooting until bomb is planted"},' +
+        '{"name" : "Track & Field", "desc" : "Both teams race from A to B. You\'re only allowed to shoot once you reach B. Grenades allowed during race. (Umamusme OST optional)"}' +
     ']}';
 
 var jsonData = JSON.parse(text);
+var fullCTList = jsonData.generic.concat(jsonData.ct_only)
+var fullTList = jsonData.generic.concat(jsonData.t_only)
+var multiTeamList = jsonData.multi_team
 
-function rollCTStrat() {
-    let fullCTList = jsonData.generic.concat(jsonData.ct_only)
-    let selectedStrat = fullCTList[Math.floor(Math.random() * fullCTList.length)];
+function roll(stratArray) {
+    let originalLength = stratArray.length
+    if (document.getElementById("enableMultiTeam").value == 1) {
+        stratArray = stratArray.concat(multiTeamList)
+    }
+
+    var index = Math.floor(Math.random() * stratArray.length)
+    let selectedStrat = stratArray[index];
 
     document.getElementById("strat-title").textContent = selectedStrat.name;
     document.getElementById("strat-desc").textContent = selectedStrat.desc;
+    if(index >= originalLength) {
+        document.getElementById("bothTeamAlert").style.display = "block"
+    }else {
+        document.getElementById("bothTeamAlert").style.display = "none"
+    }
+}
+
+function rollCTStrat() {
+    roll(fullCTList)
 }
 
 function rollTStrat() {
-    let fullTList = jsonData.generic.concat(jsonData.t_only)
-    let selectedStrat = fullTList[Math.floor(Math.random() * fullTList.length)];
-
-    document.getElementById("strat-title").textContent = selectedStrat.name;
-    document.getElementById("strat-desc").textContent = selectedStrat.desc;
+    roll(fullTList)
 }
