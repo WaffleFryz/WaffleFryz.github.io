@@ -1,7 +1,7 @@
 const spin = new Audio('357_spin1.wav')
 
 function fetchJson(file_name) {
-	return fetch(file_name)
+	fetch(file_name)
 		.then(response => {
 			if (!response.ok) {
 				throw new Error(`HTTP error! Status: ${response.status}`);
