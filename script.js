@@ -1,5 +1,7 @@
 const spin = new Audio('357_spin1.wav')
 
+const csSourceJson = fetch('cssource.json')
+
 const text = '{ "generic": [' +
         '{"name" : "Knife Round", "desc" : "Knife only. No grenades."},' +
         '{"name" : "Grenadier", "desc" : "Buy as many nades as possible. Must use all first before knifing."},' +
@@ -55,7 +57,7 @@ const text = '{ "generic": [' +
         '{"name" : "Track & Field", "desc" : "Both teams race from A to B. You\'re only allowed to shoot once you reach B. Grenades allowed during race. (Umamusme OST optional) https://www.youtube.com/watch?v=8UC6AQyRoc8"}' +
     ']}';
 
-var jsonData = JSON.parse(text);
+var jsonData = JSON.parse(csSourceJson);
 var fullCTList = jsonData.generic.concat(jsonData.ct_only)
 var fullTList = jsonData.generic.concat(jsonData.t_only)
 var multiTeamList = jsonData.multi_team

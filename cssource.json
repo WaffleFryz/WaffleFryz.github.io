@@ -1,0 +1,58 @@
+{ 
+	"generic": [
+		{"name" : "Knife Round", "desc" : "Knife only. No grenades."},
+		{"name" : "Grenadier", "desc" : "Buy as many nades as possible. Must use all first before knifing."},
+		{"name" : "Hero Rifler", "desc" : "Only the topfrag can have a rifle. If they can't buy one, donate one."},
+		{"name" : "Heavy Mag", "desc" : "Can only move with 50% mag"},
+		{"name" : "2 at Banana", "desc" : "All callouts are banana"},
+		{"name" : "Homerun", "desc" : "You must run back to spawn upon kill"},
+		{"name" : "hacks.com", "desc" : "You must type something like \"hacks.com\" upon kill"},
+		{"name" : "The Mechanic", "desc" : "Only the bottom fragger is allowed to reload guns; they cannot shoot until they are the last one alive; Swap mechanic if they die early"},
+		{"name" : "Moonwalking ", "desc" : "You can only move by holding S"},
+		{"name" : "DOOM ", "desc" : "You can only move with W and S"},
+		{"name" : "Deathball", "desc" : "Entire team moves closely together"},
+		{"name" : "Flock o birds", "desc" : "Entire team walks together and scatter when shot at; regroup when quiet"},
+		{"name" : "Tag team", "desc" : "One player from your team is chosen to leave spawn; when they die choose another player"},
+		{"name" : "I've been hit!", "desc" : "Say something like \"I've been hit!\" or \"Ow\" anytime you take damage"},
+		{"name" : "Art Break", "desc" : "Draw a smiley face or dick at spawn before leaving"},
+		{"name" : "Piloting school ", "desc" : "Invert your mouse"},
+		{"name" : "Counter Strike on Ice", "desc" : "Cannot stop/crouch/walk unless planting/defusing. Feel free to do a 360 jump whenever appropriate"},
+		{"name" : "Non-Fungible Guns", "desc" : "Every player on their team has to buy a unique SMG/Shotgun"},
+		{"name" : "Expensive Fake Flash", "desc" : "You must fake flash with your primary when rounding a corner"},
+		{"name" : "Stress-induced Blindness", "desc" : "Last player alive must close their eyes/turn off their monitor. Team can direct them"},
+		{"name" : "Honorbound", "desc" : "When pulling out a pistol/knife, you must get a kill before switching"},
+		{"name" : "Leapfrog", "desc" : "You must leapfrog with a teammate to move unless you're the last alive/alone"},
+		{"name" : "MLG Compliation", "desc" : "Do a 360 when you encounter an enemy"},
+		{"name" : "Hotline Miami", "desc" : "You must use the gun of the enemy you just killed"},
+		{"name" : "Onamanapia", "desc" : "Mute your game and imitate the sounds"},
+		{"name" : "Randomizer", "desc" : "Impulse, then violently mash B and 1-6"},
+		{"name" : "Butterfingers", "desc" : "Everytime you fire your gun you must drop it."},
+		{"name" : "The Weirding Way", "desc" : "Buy an AWP. You must yell before you shoot"},
+		{"name" : "Running Scoutsman", "desc" : "Always have a Scout out; quickswitching is allowed"},
+		{"name" : "Sam Fisher", "desc" : "Buy Nightvision Goggles. Press N"},
+		{"name" : "Marching Fire", "desc": "Entire team buys an M249. Hold Down M1 for the entire round except when planting or defusing."},
+		{"name" : "TTT Guns Only", "desc": "Valid guns: Silenced USP, Glock, Five-Seven, M4A1, M1014, Scout, M249"},
+		{"name" : "Prop Hunter", "desc": "Shoot every moveable/destructable prop you see once"}
+    ],
+	"pistol": [
+		{"name" : "Juan Deag", "desc" : "Buy a Deagle"},
+		{"name" : "SPAM", "desc" : "Buy a Five-Seven/Dualies"},
+		{"name" : "Why does this gun exist?", "desc" : "Buy a P228"},
+		{"name" : "Stealth Mission", "desc" : "Use a Silenced USP. Only smokes allowed"},
+		{"name" : "Malfunctioning Glocks", "desc" : "Use a Burst Glock"}
+	],
+    "ct_only": [
+		{"name" : "Ninja Clan", "desc" : "Entire team must attempt to ninja defuse. Knife and util only"},
+		{"name" : "Stupid Clarinet", "desc" : "Entire team buys Burst FAMAS"},
+		{"name" : "Boost me!", "desc" : "Teammates on the same site must be boosting each other. If < 4 players, stack a site"}
+    ],
+    "t_only": [
+		{"name" : "P90 Rush B", "desc" : "сука блять"},
+		{"name" : "Freeze Bomb", "desc" : "You cannot move while you have the bomb"},
+		{"name" : "FitnessGram Pacer Test", "desc" : "T's go to A. If they get a kill go to B and vise versa. Repeat until bomb is being planted"}
+    ],
+    "multi_team": [
+		{"name" : "Retake practice", "desc" : "T announce where they're planting while CT's can post up outside of site; no shooting until bomb is planted"},
+		{"name" : "Track & Field", "desc" : "Both teams race from A to B. You're only allowed to shoot once you reach B. Grenades allowed during race. (Umamusme OST optional) https://www.youtube.com/watch?v=8UC6AQyRoc8"}
+    ]
+}
