@@ -1,4 +1,4 @@
-{ 
+{
 	"generic": [
 		{"name" : "Knife Round", "desc" : "Knife only. No grenades."},
 		{"name" : "Grenadier", "desc" : "Buy as many nades as possible. Must use all first before knifing."},
