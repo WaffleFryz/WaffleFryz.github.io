@@ -12,7 +12,7 @@ function fetchJson(file_name) {
 		.catch(error => console.error('Failed to fetch data:', error)); 
 }
 
-const jsonData = fetchJson('https://github.com/WaffleFryz/WaffleFryz.github.io/blob/main/cssource.json')
+const jsonData = fetchJson('cssource.json')
 var fullCTList = jsonData.generic.concat(jsonData.ct_only)
 var fullTList = jsonData.generic.concat(jsonData.t_only)
 var multiTeamList = jsonData.multi_team
