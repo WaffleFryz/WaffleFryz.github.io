@@ -8,7 +8,7 @@ function fetchJson(file_name) {
 			}
 			return response.json();  
 		})
-		.then(data => console.log(data))  
+		.then(data => return data)
 		.catch(error => console.error('Failed to fetch data:', error)); 
 }
 
