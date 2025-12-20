@@ -1,4 +1,8 @@
 const spin = new Audio('357_spin1.wav')
+let jsonData;
+let fullCTList;
+let fullTList;
+let multiTeamList;
 
 function fetchJson(file_name) {
 	fetch(file_name)
@@ -8,14 +12,16 @@ function fetchJson(file_name) {
 			}
 			return response.json();  
 		})
-		.then(data => console.log(data))  
+		.then(data => {
+			jsonData = data
+			fullCTList = jsonData.generic.concat(jsonData.ct_only)
+			fullTList = jsonData.generic.concat(jsonData.t_only)
+			multiTeamList = jsonData.multi_team
+		})
 		.catch(error => console.error('Failed to fetch data:', error)); 
 }
 
-const jsonData = fetchJson('cssource.json')
-var fullCTList = jsonData.generic.concat(jsonData.ct_only)
-var fullTList = jsonData.generic.concat(jsonData.t_only)
-var multiTeamList = jsonData.multi_team
+fetchJson('cssource.json')
 
 function roll(stratArray) {
     let originalLength = stratArray.length
