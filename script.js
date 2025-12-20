@@ -3,6 +3,7 @@ let jsonData;
 let fullCTList;
 let fullTList;
 let multiTeamList;
+let pistolList;
 
 function fetchJson(file_name) {
 	fetch(file_name)
@@ -17,6 +18,7 @@ function fetchJson(file_name) {
 			fullCTList = jsonData.generic.concat(jsonData.ct_only)
 			fullTList = jsonData.generic.concat(jsonData.t_only)
 			multiTeamList = jsonData.multi_team
+			pistolList = jsonData.pistol
 		})
 		.catch(error => console.error('Failed to fetch data:', error)); 
 }
@@ -52,6 +54,10 @@ function rollTStrat() {
     roll(fullTList)
 }
 
+function rollPistolStrat() {
+    roll(pistolList)
+}
+
 var input = document.getElementById("searchbar");
 input.addEventListener("keypress", function(event) {
 	if(event.key === "Enter") {
@@ -63,7 +69,7 @@ input.addEventListener("keypress", function(event) {
 function search() {
 	let input = document.getElementById('searchbar').value
 	input = input.toLowerCase();
-	let fullList = jsonData.generic.concat(jsonData.ct_only).concat(jsonData.t_only).concat(jsonData.multi_team)
+	let fullList = jsonData.generic.concat(jsonData.ct_only).concat(jsonData.t_only).concat(jsonData.multi_team).concat(pistolList)
 	for (i = 0;i < fullList.length; i++) {
 		if(fullList[i].name.toLowerCase().includes(input)) {
 			document.getElementById("strat-title").textContent = fullList[i].name;
