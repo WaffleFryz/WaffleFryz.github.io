@@ -1,7 +1,7 @@
 const spin = new Audio('357_spin1.wav')
 
 function fetchJson(file_name) {
-	return fetch(file_name)
+	fetch(file_name)
 		.then(response => {
 			if (!response.ok) {
 				throw new Error(`HTTP error! Status: ${response.status}`);
@@ -44,4 +44,27 @@ function rollCTStrat() {
 
 function rollTStrat() {
     roll(fullTList)
+}
+
+var input = document.getElementById("searchbar");
+input.addEventListener("keypress", function(event) {
+	if(event.key === "Enter") {
+		event.preventDefault();
+		document.getElementById("searchbutton").click();
+	}
+});
+
+function search() {
+	let input = document.getElementById('searchbar').value
+	input = input.toLowerCase();
+	let fullList = jsonData.generic.concat(jsonData.ct_only).concat(jsonData.t_only).concat(jsonData.multi_team)
+	for (i = 0;i < fullList.length; i++) {
+		if(fullList[i].name.toLowerCase().includes(input)) {
+			document.getElementById("strat-title").textContent = fullList[i].name;
+			document.getElementById("strat-desc").textContent = fullList[i].desc;
+			return;
+		}
+	}
+	document.getElementById("strat-title").textContent = "!NONE FOUND!";
+	document.getElementById("strat-desc").textContent = "idk what to tell you. sorry";
 }

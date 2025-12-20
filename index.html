@@ -15,6 +15,8 @@
         <h3 id="bothTeamAlert">BOTH TEAMS REQUIRED. ALERT THE OTHER TEAM</h3>
         <button type="button" class="button ct" onclick="rollCTStrat()">Roll CT Strat</button>
         <button type="button" class="button t" onclick="rollTStrat()">Roll T Strat</button>
+		<br>
+		<button type="button" class="button generic" onclick="rollPistolStrat()">Roll Pistol Strat</button>
         <br><br>
         <label for="dropdown">Enable Both Team Required Strats? (Both teams need to agree to this)</label>
         <br>
@@ -22,5 +24,8 @@
             <option selected value="0">False</option>
             <option value="1">True</option>
         </select>
+		<br>
+		<input id="searchbar" class="input" placeholder="Type strat name here...">
+		<button id="searchbutton" type="button" class="button generic" onclick="search()">Search</button>
     </body>
 </html>

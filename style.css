@@ -63,3 +63,23 @@ h3 {
 .t:active {
     background-color: #E0CB8D;
 }
+.generic {
+	border-color: #000000;
+}
+.generic:hover {
+	background-color: #04BF79;
+}
+.generic:active {
+	background-color: #05EB95;
+}
+
+#searchbar {
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    width: 50%;
+    box-sizing: border-box;
+    color:blue;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2em;
+}
