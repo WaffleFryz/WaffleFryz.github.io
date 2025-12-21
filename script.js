@@ -40,7 +40,7 @@ function roll(stratArray) {
     document.getElementById("strat-desc").textContent = selectedStrat.desc;
 
 	var history = document.getElementById("history");
-	history.textContent += selectedStrat.name + " - " + selectedStrat.desc + "\n";
+	history.textContent += "• " + selectedStrat.name + " - " + selectedStrat.desc + "\n";
 
 	stratArray.splice(index, 1)
 	
@@ -61,7 +61,7 @@ function rollSecondary() {
     var index = Math.floor(Math.random() * pistolSecondaryList.length)
     let selectedStrat = pistolSecondaryList[index];
 
-    document.getElementById("strat-title-2").textContent = "&" + selectedStrat.name;
+    document.getElementById("strat-title-2").textContent = "& " + selectedStrat.name;
     document.getElementById("strat-desc-2").textContent = selectedStrat.desc;
 
 	var history = document.getElementById("history");
