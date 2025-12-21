@@ -38,8 +38,7 @@ function roll(stratArray) {
     document.getElementById("strat-desc").textContent = selectedStrat.desc;
 
 	var history = document.getElementById("history");
-	var text = document.createTextNode(selectedStrat.name + " - " + selectedStrat.desc + "\n");
-	history.appendChild(text);
+	history.textContent += selectedStrat.name + " - " + selectedStrat.desc + "\n";
 
 	stratArray.splice(index, 1)
 
