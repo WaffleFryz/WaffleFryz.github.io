@@ -44,8 +44,8 @@ function roll(stratArray) {
 
 	stratArray.splice(index, 1)
 	
-	document.getElementById("strat-title-2").style.display = "hide"
-	document.getElementById("strat-desc-2").style.display = "hide"
+	document.getElementById("strat-title-2").style.display = "none"
+	document.getElementById("strat-desc-2").style.display = "none"
 
     // if(index >= originalLength) {
     //     document.getElementById("bothTeamAlert").style.display = "block"
@@ -61,7 +61,7 @@ function rollSecondary() {
     var index = Math.floor(Math.random() * pistolSecondaryList.length)
     let selectedStrat = pistolSecondaryList[index];
 
-    document.getElementById("strat-title-2").textContent = selectedStrat.name;
+    document.getElementById("strat-title-2").textContent = "&" + selectedStrat.name;
     document.getElementById("strat-desc-2").textContent = selectedStrat.desc;
 
 	var history = document.getElementById("history");
