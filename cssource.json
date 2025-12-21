@@ -43,16 +43,10 @@
 	],
     "ct_only": [
 		{"name" : "Ninja Clan", "desc" : "Entire team must attempt to ninja defuse. Knife and util only"},
-		{"name" : "Stupid Clarinet", "desc" : "Entire team buys Burst FAMAS"},
 		{"name" : "Boost me!", "desc" : "Teammates on the same site must be boosting each other. If < 4 players, stack a site"}
     ],
     "t_only": [
 		{"name" : "P90 Rush B", "desc" : "сука блять"},
-		{"name" : "Freeze Bomb", "desc" : "You cannot move while you have the bomb"},
-		{"name" : "FitnessGram Pacer Test", "desc" : "T's go to A. If they get a kill go to B and vise versa. Repeat until bomb is being planted"}
-    ],
-    "multi_team": [
-		{"name" : "Retake practice", "desc" : "T announce where they're planting while CT's can post up outside of site; no shooting until bomb is planted"},
-		{"name" : "Track & Field", "desc" : "Both teams race from A to B. You're only allowed to shoot once you reach B. Grenades allowed during race. (Umamusme OST optional) https://www.youtube.com/watch?v=8UC6AQyRoc8"}
+		{"name" : "Freeze Bomb", "desc" : "You cannot move while you have the bomb"}
     ]
 }

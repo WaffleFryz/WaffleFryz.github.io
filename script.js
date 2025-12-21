@@ -2,7 +2,7 @@ const spin = new Audio('357_spin1.wav')
 let jsonData;
 let fullCTList;
 let fullTList;
-let multiTeamList;
+// let multiTeamList;
 let pistolList;
 
 function fetchJson(file_name) {
@@ -17,7 +17,7 @@ function fetchJson(file_name) {
 			jsonData = data
 			fullCTList = jsonData.generic.concat(jsonData.ct_only)
 			fullTList = jsonData.generic.concat(jsonData.t_only)
-			multiTeamList = jsonData.multi_team
+			// multiTeamList = jsonData.multi_team
 			pistolList = jsonData.pistol
 		})
 		.catch(error => console.error('Failed to fetch data:', error)); 
@@ -26,10 +26,10 @@ function fetchJson(file_name) {
 fetchJson('cssource.json')
 
 function roll(stratArray) {
-    let originalLength = stratArray.length
-    if (document.getElementById("enableMultiTeam").value == 1) {
-        stratArray = stratArray.concat(multiTeamList)
-    }
+    // let originalLength = stratArray.length
+    // if (document.getElementById("enableMultiTeam").value == 1) {
+    //     stratArray = stratArray.concat(multiTeamList)
+    // }
 
     var index = Math.floor(Math.random() * stratArray.length)
     let selectedStrat = stratArray[index];
@@ -37,14 +37,23 @@ function roll(stratArray) {
     document.getElementById("strat-title").textContent = selectedStrat.name;
     document.getElementById("strat-desc").textContent = selectedStrat.desc;
 
-    if(index >= originalLength) {
-        document.getElementById("bothTeamAlert").style.display = "block"
-    }else {
-        document.getElementById("bothTeamAlert").style.display = "none"
-    }
+	stratArray.splice(index, 1)
+
+    // if(index >= originalLength) {
+    //     document.getElementById("bothTeamAlert").style.display = "block"
+    // }else {
+    //     document.getElementById("bothTeamAlert").style.display = "none"
+    // }
 
     // spin.play()
 }
+
+//		{"name" : "FitnessGram Pacer Test", "desc" : "T's go to A. If they get a kill go to B and vise versa. Repeat until bomb is being planted"}
+//
+//	"multi_team": [
+// 		{"name" : "Retake practice", "desc" : "T announce where they're planting while CT's can post up outside of site; no shooting until bomb is planted"},
+// 		{"name" : "Track & Field", "desc" : "Both teams race from A to B. You're only allowed to shoot once you reach B. Grenades allowed during race. (Umamusme OST optional) https://www.youtube.com/watch?v=8UC6AQyRoc8"}
+//	]
 
 function rollCTStrat() {
     roll(fullCTList)
@@ -58,16 +67,8 @@ function rollPistolStrat() {
     roll(pistolList)
 }
 
-var input = document.getElementById("searchbar");
-input.addEventListener("keypress", function(event) {
-	if(event.key === "Enter") {
-		event.preventDefault();
-		document.getElementById("searchbutton").click();
-	}
-});
-
 function search() {
-	let input = document.getElementById('searchbar').value
+	let input = document.getElementById("searchbar").value
 	input = input.toLowerCase();
 	let fullList = jsonData.generic.concat(jsonData.ct_only).concat(jsonData.t_only).concat(jsonData.multi_team).concat(pistolList)
 	for (i = 0;i < fullList.length; i++) {
@@ -79,4 +80,10 @@ function search() {
 	}
 	document.getElementById("strat-title").textContent = "!NONE FOUND!";
 	document.getElementById("strat-desc").textContent = "idk what to tell you. sorry";
+}
+
+function resetStrats() {
+	fetchJson('cssource.json')
+	document.getElementById("strat-title").textContent = "!STRATS RESET!";
+	document.getElementById("strat-desc").textContent = "Strats reset!";
 }

@@ -72,6 +72,15 @@ h3 {
 .generic:active {
 	background-color: #05EB95;
 }
+.red {
+    background-color: #bb2525;
+}
+.red:hover {
+    background-color: #cd3131;
+}
+.red:active {
+    background-color: #f90000;
+}
 
 #searchbar {
     margin: 10px;

@@ -14,17 +14,18 @@
         </p>
         <h3 id="bothTeamAlert">BOTH TEAMS REQUIRED. ALERT THE OTHER TEAM</h3>
         <button type="button" class="button ct" onclick="rollCTStrat()">Roll CT Strat</button>
+        <button type="button" class="button generic" onclick="rollPistolStrat()">Roll Pistol Strat</button>
         <button type="button" class="button t" onclick="rollTStrat()">Roll T Strat</button>
-		<br>
-		<button type="button" class="button generic" onclick="rollPistolStrat()">Roll Pistol Strat</button>
         <br><br>
-        <label for="dropdown">Enable Both Team Required Strats? (Both teams need to agree to this)</label>
+        <button type="button" class="button red" onclick="resetStrats()">RESET</button>
+        <br><br>
+        <!-- <label for="dropdown">Enable Both Team Required Strats? (Both teams need to agree to this)</label>
         <br>
         <select name="dropdown" id="enableMultiTeam">
             <option selected value="0">False</option>
             <option value="1">True</option>
         </select>
-		<br>
+		<br> -->
 		<input id="searchbar" class="input" placeholder="Type strat name here...">
 		<button id="searchbutton" type="button" class="button generic" onclick="search()">Search</button>
 		<script>
