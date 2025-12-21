@@ -22,21 +22,20 @@
 		{"name" : "Stress-induced Blindness", "desc" : "Last player alive must close their eyes/turn off their monitor. Team can direct them"},
 		{"name" : "Honorbound", "desc" : "When pulling out a pistol/knife, you must get a kill before switching"},
 		{"name" : "Leapfrog", "desc" : "You must leapfrog with a teammate to move unless you're the last alive/alone"},
-		{"name" : "MLG Compliation", "desc" : "Do a 360 when you encounter an enemy"},
+		{"name" : "MLG Compliation", "desc" : "Buy an AWP, Scout, Shotgun, or Deagle. Do a 360 spin before every shot"},
 		{"name" : "Hotline Miami", "desc" : "You must use the gun of the enemy you just killed"},
 		{"name" : "Onamanapia", "desc" : "Mute your game and imitate the sounds"},
-		{"name" : "Randomizer", "desc" : "Impulse, then violently mash B and 1-6"},
+		{"name" : "Randomizer", "desc" : "Violently mash B and 1-6"},
 		{"name" : "Butterfingers", "desc" : "Everytime you fire your gun you must drop it."},
 		{"name" : "The Weirding Way", "desc" : "Buy an AWP. You must yell before you shoot"},
 		{"name" : "Running Scoutsman", "desc" : "Always have a Scout out; quickswitching is allowed"},
 		{"name" : "Sam Fisher", "desc" : "Buy Nightvision Goggles. Press N"},
 		{"name" : "Marching Fire", "desc": "Entire team buys an M249. Hold Down M1 for the entire round except when planting or defusing."},
-		{"name" : "TTT Guns Only", "desc": "Valid guns: Silenced USP, Glock, Five-Seven, M4A1, M1014, Scout, M249"},
-		{"name" : "Prop Hunter", "desc": "Shoot every moveable/destructable prop you see once"}
+		{"name" : "TTT Guns Only", "desc": "Valid guns: Silenced USP, Glock, Five-Seven, M4A1, M1014, Scout, M249"}
     ],
 	"pistol": [
 		{"name" : "Juan Deag", "desc" : "Buy a Deagle"},
-		{"name" : "SPAM", "desc" : "Buy a Five-Seven/Dualies"},
+		{"name" : "SPAM (Dualies/Five-Seven)", "desc" : "Buy a Five-Seven/Dualies"},
 		{"name" : "Why does this gun exist?", "desc" : "Buy a P228"},
 		{"name" : "Stealth Mission", "desc" : "Use a Silenced USP. Only smokes allowed"},
 		{"name" : "Malfunctioning Glocks", "desc" : "Use a Burst Glock"}
