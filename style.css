@@ -36,11 +36,6 @@ select {
     font-weight: bold;
 }
 
-h3 {
-    display: none;
-    color: red;
-}
-
 .ct {
     background-color: #58768E;
     border-color: #0C0F12;
@@ -94,6 +89,15 @@ input {
     font-size: 1.2em;
 }
 
+#strat-title-2,strat-desc-2  {
+	display: none;
+}
+
 #history {
     white-space: pre-line
+}
+
+#bothTeamAlert {
+    display: none;
+    color: red;
 }

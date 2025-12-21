@@ -4,6 +4,7 @@ let fullCTList;
 let fullTList;
 // let multiTeamList;
 let pistolList;
+let pistolSecondaryList;
 
 function fetchJson(file_name) {
 	fetch(file_name)
@@ -19,6 +20,7 @@ function fetchJson(file_name) {
 			fullTList = jsonData.generic.concat(jsonData.t_only)
 			// multiTeamList = jsonData.multi_team
 			pistolList = jsonData.pistol
+			pistolSecondaryList = jsonData.generic.filter((obj) => obj.can_pistol)
 		})
 		.catch(error => console.error('Failed to fetch data:', error)); 
 }
@@ -41,6 +43,9 @@ function roll(stratArray) {
 	history.textContent += selectedStrat.name + " - " + selectedStrat.desc + "\n";
 
 	stratArray.splice(index, 1)
+	
+	document.getElementById("strat-title-2").style.display = "hide"
+	document.getElementById("strat-desc-2").style.display = "hide"
 
     // if(index >= originalLength) {
     //     document.getElementById("bothTeamAlert").style.display = "block"
@@ -49,6 +54,21 @@ function roll(stratArray) {
     // }
 
     // spin.play()
+}
+
+function rollSecondary() {
+
+    var index = Math.floor(Math.random() * pistolSecondaryList.length)
+    let selectedStrat = pistolSecondaryList[index];
+
+    document.getElementById("strat-title-2").textContent = selectedStrat.name;
+    document.getElementById("strat-desc-2").textContent = selectedStrat.desc;
+
+	var history = document.getElementById("history");
+	history.textContent += "AND " + selectedStrat.name + " - " + selectedStrat.desc + "\n";
+	
+	document.getElementById("strat-title-2").style.display = "block"
+	document.getElementById("strat-desc-2").style.display = "block"
 }
 
 //		{"name" : "FitnessGram Pacer Test", "desc" : "T's go to A. If they get a kill go to B and vise versa. Repeat until bomb is being planted"}
@@ -68,6 +88,7 @@ function rollTStrat() {
 
 function rollPistolStrat() {
     roll(pistolList)
+	rollSecondary(pistolSecondaryList)
 }
 
 function search() {
