@@ -63,6 +63,7 @@ h3 {
 .t:active {
     background-color: #E0CB8D;
 }
+
 .generic {
 	border-color: #000000;
 }
@@ -72,6 +73,7 @@ h3 {
 .generic:active {
 	background-color: #05EB95;
 }
+
 .red {
     background-color: #bb2525;
 }
@@ -82,7 +84,7 @@ h3 {
     background-color: #f90000;
 }
 
-#searchbar {
+input {
     margin: 10px;
     padding: 10px;
     border-radius: 5px;
