@@ -89,4 +89,5 @@ function resetStrats() {
 	fetchJson('cssource.json')
 	document.getElementById("strat-title").textContent = "!STRATS RESET!";
 	document.getElementById("strat-desc").textContent = "Strats reset!";
+	document.getElementById("history").textContent = "";
 }
